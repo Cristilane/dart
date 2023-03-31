@@ -1,0 +1,28 @@
+import 'dart:io';
+void main() {
+ 
+  print("Olá mundo");
+  //INPUT 
+  //IMPRIME QUALQUER COISA no dart
+  int idade= 25;
+  print("minha idade é: " + idade.toString()+".");
+  
+  //interpolação- pode ser feita com operação ou sem;
+  print("minha idade ano que vem será:  ${idade+1}");
+  //OUTPUT
+  
+  //ReadLine - ler uma linha| Sync- Assincrono e sincrono 
+  String? input= stdin.readLineSync();//nulo ou string (?)
+  if (input != null){
+    print("Sua idade $input.");
+  }
+  print("Já escrevi");
+  
+  //conversão de inteiro para string 
+  
+  
+  String? input= stdin.readLineSync();//nulo ou string (?)
+  if (input != null){
+    int idade= int.parse(input);
+    print("Sua idade ano que vem será ${idade + 1}.");
+}
