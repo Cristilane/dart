@@ -1,2 +1,50 @@
 # dart
 Estudo sobre Dart 
+
+main(){
+
+    List<String> list=["Cristilane", "Gois", "de","Souza"];
+   
+  //sublist - sublista 
+  
+  List<String> sublist=  list.sublist(2,4);
+  print(sublist);
+  
+  //for each - para cada um(passar por todos os dados do vetor)
+  list.forEach((element){
+    print(element);
+  });
+  print("Acabou");
+  
+  //contains - verificar se há algo na lista 
+  
+  String procurando="Souza";
+  if(list.contains(procurando)){
+    print("Achou");
+  }else{
+    print("Não achou");
+  }
+  
+  print(list.contains("Criz"));
+  //retorna true or false
+  
+  //reduce - reduzir em algo- um objeto só 
+  String myName =list.reduce((value, element){
+    return value +" "+element; 
+  }) ; 
+  print(list);
+  print(myName);
+  
+  
+  //Where - pega elemento que atenda uma condição(não me da uma litsa, e sim um Iterable(pai da lista) )  
+Iterable maior= list.where((element)=> element.length >4);
+  //List<String> maior= list.where((element)=> element.length >4).toList();  ---- transformado 
+  print(maior); 
+  //transforma em lista 
+  print(maior.toList());
+  
+  // primeiro nome- firstWhere or Ultimo nome- lastWhere 
+  String myString= list.firstWhere((element)=>element.length>4); 
+  print(myString);
+}
+
