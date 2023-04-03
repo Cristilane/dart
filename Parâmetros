@@ -1,0 +1,69 @@
+void main() {
+ String nome= "Laranja";
+  double peso= 100.2;
+  String corFruta="verde e amarela";
+  String sabor="Doce e cítrica";
+  int diasDesdeColheita=40;
+  bool isMadura= funcEstaMadura(diasDesdeColheita);
+  mostrarMadura(nome:"uva", dias:40, cor:"Roxa");
+ // print(isMadura);
+  //print(funcEstaMadura(50));//argumento do parametro da função
+}
+bool funcEstaMadura(int dias){ //int dias é um paramentro 
+  if(dias>= 30){
+    return true;
+  }else{
+    return false;
+  }
+}
+//posicionais obrigatórios
+
+/*mostrarMadura(String nome, int dias){
+  if(dias>=30){
+    print("A $nome está madura.");
+  }else {
+    print("A $nome não está madura.");
+  }
+}*/
+
+//nomeados opcionais - não depende de ordem  quando os parametro são passados com "?"
+
+/*mostrarMadura(String nome, int dias, {String? cor}){ // "?" poderá receber valor null
+  if(dias>=30){
+    print("A $nome está madura.");
+  }else {
+    print("A $nome não está madura.");
+  }
+  
+  if(cor!=null){
+    print("A $nome é $cor"); 
+  }
+}*/
+
+//parametros com "padrão"
+ /* 
+  mostrarMadura(String nome, int dias, {String cor="Sem cor"}){ // "?" poderá receber valor null
+  if(dias>=30){
+    print("A $nome está madura.");
+  }else {
+    print("A $nome não está madura.");
+  }
+  
+  if(cor!=null){
+    print("A $nome é $cor"); 
+  }
+}
+  */
+
+// modificador "required"- nomeado mas sendo obrigatório 
+mostrarMadura({required String nome,required int dias, required cor}){ 
+  if(dias>=30){
+    print("A $nome está madura.");
+  }else {
+    print("A $nome não está madura.");
+  }
+  
+  if(cor!=null){
+    print("A $nome é $cor"); 
+  }
+}
