@@ -1,0 +1,16 @@
+ //escopo- ter algo com limite - tudo que tiver na chave poderá usar, mas se não, não poderá chamar 
+  String nome= "Laranja";
+  double peso= 100.2;
+  String corFruta="verde e amarela";
+  String sabor="Doce e cítrica";
+  int diasDesdeColheita=40;
+// bool isMadura= funcEstaMadura(diasDesdeColheita); //funciona porque está dento do escopo do main
+int quantosDias = funcQuantosDiasMadura(diasDesdeColheita);
+  print (quantosDias);
+}
+
+int funcQuantosDiasMadura(int dias ){
+  int diasParaMadura= 30;
+  int quantosDiasFaltam=  dias- diasParaMadura ;
+  return quantosDiasFaltam;
+}
