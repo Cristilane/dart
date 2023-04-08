@@ -18,7 +18,12 @@ Fruta fruta02= Fruta("Uva", 40, "Roxa","Doce",20);
   print(fruta02.nome);
   print(fruta02);
   
-  
+ /* main() {
+  Fruta laranja = Fruta("Laranja", "Verde"); // Criando o objeto com o construtor padrão
+  Fruta uva = Fruta.nomeados(nome: "Uva", cor: "Roxo"); // Criando o objeto com o construtor nomeado
+}*/
+
+
 }
 class Fruta {
   String nome;
@@ -31,6 +36,13 @@ class Fruta {
   //entre chave significa opcional 
   Fruta(this.nome, this.peso, this.cor, this.sabor, this.diasDesdeColheita,
       {this.isMadura});
+/* class Fruta{
+  String nome;
+  String cor;
+// Construtor nomeado
+  Fruta(this.nome, this.cor);
 
+  Fruta.nomeados({required this.nome, required this.cor});
+}*/
  
 }
