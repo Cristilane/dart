@@ -1,0 +1,22 @@
+
+void main() {
+  
+  //Imultabilidade: é quando as coisas não muda 
+  //chave de autenticação = chave de API: dbfhvsbhvbgjhcbgbrtchhrixhruihtuich
+  // const - garantir que não vai ter alteração apos a inicialização /
+  //                precisa ser inicializado na hora da declaração
+  
+  const String nome= "Cristilane";
+  //nome="Cris"; não funciona por conta do Const
+  print(nome);
+  
+  //final :atribuição unica de váriaveis 
+    //pode inicializar depois da declaração, porém não pode ser alterado depois 
+  final String nameOther;
+  nameOther="Cris";
+  print(nameOther);
+  
+  
+  
+}
+
