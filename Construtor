@@ -1,0 +1,36 @@
+void main() {
+  String nome = "Laranja";
+  double peso = 100.2;
+  String cor = "Verde e Amarela";
+  String sabor = "Doce e cítrica";
+  int diasDesdeColheita = 40;
+  bool? isMadura;
+  
+  //instanciando fruta 
+Fruta fruta01 = Fruta(nome, peso,cor,sabor, diasDesdeColheita);
+Fruta fruta02= Fruta("Uva", 40, "Roxa","Doce",20);
+  
+  //acesso de propriedade do objeto 
+  print(fruta01.nome);
+  //print do proprio objeto - neste caso Instancia de fruta 
+  print(fruta01);
+  
+  print(fruta02.nome);
+  print(fruta02);
+  
+  
+}
+class Fruta {
+  String nome;
+  double peso;
+  String cor;
+  String sabor;
+  int diasDesdeColheita;
+  bool? isMadura;
+//Construtor - parametro posicional 
+  //entre chave significa opcional 
+  Fruta(this.nome, this.peso, this.cor, this.sabor, this.diasDesdeColheita,
+      {this.isMadura});
+
+ 
+}
